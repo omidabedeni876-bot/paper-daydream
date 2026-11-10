@@ -45,6 +45,85 @@ body{background:#f4f8f2;isolation:isolate}body:before{content:'';position:fixed;
 @media(min-width:761px){.scroll-on .hero .desk{height:min(490px,60svh)}.scroll-on .hero h1{font-size:clamp(70px,6.5vw,100px)}.scroll-on .hero{padding-bottom:70px}.scroll-on .hero-copy{align-self:center}.scroll-on .hero-copy>p{font-size:12px}.scroll-on .hero .hero-foot{font-size:9px}}
 @media(max-width:760px){.hero-copy:before{inset:-15px -10px}.hero-scroll{background:linear-gradient(#f8fbf244,transparent)}.scroll-on .hero{grid-template-rows:40% 60%;padding-top:10px}.scroll-on .hero h1{font-size:clamp(44px,7.5svh,62px)}.scroll-caption{font-size:22px}.scroll-chapters{gap:5px}.scroll-chapters button{font-size:6px;padding:4px 5px}.scroll-hint{font-size:7px;gap:6px;padding:4px 6px}.bundle{border-radius:28px}.gallery-journey{border-radius:28px 28px 0 0}.gallery-panel{border-radius:24px}.product-art{border-radius:22px 22px 15px 15px}.toolbar{padding-inline:10px}.motion-toggle{bottom:10px}.scroll-on .hero .book-cover strong{font-size:clamp(30px,5svh,46px)}}
 
+/* Mobile editorial polish: keep watercolor pigment visible at portrait widths. */
+:root{--ink:#183e59;--blue:#245f8f;--orange:#4788a0;--lime:#e8e7a9;--muted:#496779;--line:#244f6828}
+body{font-size:15px;line-height:1.95}
+.hero h1,.section-heading h2,.bundle h2,.manifesto h2,.gallery-heading h2,.gallery-panel h3{letter-spacing:0;line-height:1.18}
+.hero h1 em:after{display:none!important;content:none!important}
+.hero h1 em{color:#245b86;text-shadow:0 2px 0 #ffffff8a}
+.section-heading h2,.bundle h2,.manifesto h2{ text-wrap:balance }
+.product h3{font-size:14px;line-height:1.65}.product p{font-size:12px;line-height:1.8}.price{font-size:14px}.price small{font-size:11px}
+.maker-logo{width:calc(min(174px,18vw) + 2mm)}
+.organic-divider{display:block;width:min(100%,1440px);height:30px;margin:0 auto;opacity:.44;color:#4f91a4;pointer-events:none}
+.organic-divider img{display:block;width:100%;height:100%}
+.eyebrow-flower{width:17px;height:17px;object-fit:contain;opacity:.82;flex:none}
+.mobile-menu-toggle{display:none}
+.mobile-nav{display:none}
+.book-cover{background-color:#285f89;background-image:radial-gradient(ellipse at 19% 24%,#83b9bb42 0 1%,transparent 36%),radial-gradient(ellipse at 80% 73%,#ded38d36 0 1%,transparent 39%),linear-gradient(135deg,#244e78,#2f7392 53%,#23547e);box-shadow:inset 12px 0 15px #0002,inset 0 0 0 1px #ffffff12}
+.book-cover:before{inset:13px;border:1px solid #f5f0df55;border-radius:4px 10px 10px 4px;transform:rotate(-.3deg)}
+.book-cover strong{font-family:Mirza,serif;text-shadow:1px 2px 0 #173d624a;transform:rotate(-1deg);line-height:1.08}
+.book-cover span,.book-cover small{letter-spacing:.08em}
+.book-page,.book-flip-leaf{background-color:#fbf8ec;background-image:radial-gradient(#c6bfa51c .65px,transparent .8px),repeating-linear-gradient(#faf7eb 0 27px,#244cb020 28px 29px);background-size:7px 7px,auto}
+.book-cover:after{width:4px;background:linear-gradient(90deg,#fff3,#163b6055,#fff1)}
+.product-art{contain:paint}.product-art svg{max-width:100%;max-height:100%}
+.quick-view{font-size:12px;min-height:40px;display:grid;place-items:center}
+.add,.fav,.chip,.mood,.swatch,.close,.qty button,.gallery-dots button,.drawing-tools button{min-width:40px;min-height:40px}
+.notebook-scrollbar{width:31px!important;height:156px!important;border-radius:18px!important;left:max(9px,env(safe-area-inset-left))!important}
+.notebook-scrollbar__paper{inset:7px!important}.notebook-scrollbar__thumb{width:25px!important;height:52px!important}.notebook-scrollbar__thumb svg{width:19px!important;height:42px!important}
+@media(max-width:760px){
+ .hero-scroll{overflow-x:clip}
+ .orbit{transform:rotate(-18deg) scaleX(.78)}
+ html{scroll-padding-top:82px}
+ body{font-size:15px;line-height:1.9}
+ .wrap{width:min(92%,620px)}
+ body:before{z-index:-1;background-image:linear-gradient(#f5faf47d,#f3f8f04f),url(watercolor.jpg),url(watercolor.jpg);background-position:center,left center,right center;background-size:100% 100%,180vw 100svh,180vw 100svh;background-repeat:no-repeat;opacity:.92}
+ header{backdrop-filter:blur(8px);background:#f7faf0e8}
+ .nav{height:70px;gap:8px}.logo{gap:7px}.logo strong{font-size:25px}.logo small{font-size:7px;letter-spacing:2px}.logo-mark{width:31px;height:34px;font-size:21px}
+ .nav>nav{display:none}
+ .mobile-menu-toggle{display:grid;place-items:center;width:42px;height:42px;border:1px solid #27577455;border-radius:50%;color:var(--ink);background:#f7fbf1c9}
+ .mobile-menu-toggle svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+ .nav-actions{gap:8px}.nav-actions #favoriteFilter{width:40px;height:40px}.bag{min-height:40px;padding:5px 10px;font-size:11px;gap:6px}.bag b{width:22px;height:22px}
+ .mobile-nav{position:absolute;top:calc(100% + 7px);right:4%;left:4%;display:grid;gap:4px;padding:10px;border:1px solid #3d789447;border-radius:20px;background:#f5f8eeeF;backdrop-filter:blur(14px);box-shadow:0 16px 38px #183e5926;opacity:0;visibility:hidden;transform:translateY(-8px) scale(.985);transform-origin:top right;transition:opacity .22s,transform .22s,visibility .22s;z-index:22}
+ .mobile-nav[data-open="true"]{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+ .mobile-nav a{display:flex;align-items:center;min-height:46px;padding:7px 14px;border-radius:13px;font-size:14px}.mobile-nav a:active,.mobile-nav a:focus-visible{background:#dbe9de}
+ .hero-scroll{background:linear-gradient(105deg,#f7faf091 0%,#f4f8ef80 50%,#f7faf091 100%)}
+ .hero{padding-top:23px;padding-bottom:22px;gap:6px;min-height:0}
+ .hero-copy:before{inset:-16px -13px;background:radial-gradient(ellipse,#f7faf0ee 18%,#f7faf0c9 58%,transparent 82%)}
+ .eyebrow{font-size:11px;letter-spacing:0;gap:8px}.eyebrow:before{width:18px}
+ .hero h1{font-size:clamp(50px,11.5vw,64px);line-height:1.08;margin:16px 0 12px;letter-spacing:0}
+ .hero-copy>p{font-size:14px;line-height:1.95;max-width:35ch;margin:0}
+ .hero-links{gap:14px;margin-top:15px;flex-wrap:wrap}.cta{font-size:12px;min-height:46px;padding:10px 18px;gap:18px}.text-link{font-size:12px}
+ .hero-foot{font-size:11px;margin-top:14px;line-height:1.7}
+ .desk{height:clamp(330px,96vw,440px);max-width:500px;margin:0 auto;overflow:visible}
+ .hero .hero-notebook{top:15%;height:70%;width:48%;left:25%}.book-cover strong{font-size:clamp(43px,11vw,58px);margin:16px 0 11px}.book-cover span{font-size:9px}.book-cover small{font-size:7px}.book-sun{font-size:45px;margin:7px}
+ .sticky-note{font-size:20px}.handnote{font-size:18px;left:14%;bottom:4%}.round-stamp{width:62px;height:62px;font-size:7px}.round-stamp b{font-size:20px}
+ .organic-divider{height:24px}
+ .ticker{padding:11px 0}.ticker-inner{font-size:23px}
+ .section{padding:45px 0}.section-heading{gap:8px;align-items:end;margin-bottom:20px}.section-heading h2{font-size:clamp(35px,9vw,46px);line-height:1.22;margin-top:7px}.section-heading p{font-size:11px;line-height:1.8;max-width:120px}
+ .categories{gap:12px}.category{min-height:168px;padding:17px 14px;border-radius:48% 44% 18px 18px}.category svg{height:102px}.category .cat-label{font-size:13px;gap:5px}.category small{font-size:10px}
+ .shop{padding-top:12px}.toolbar{padding:12px 10px;gap:10px;margin-bottom:18px;border-radius:17px}.filters{width:100%;overflow-x:auto;flex-wrap:nowrap;padding:2px 0 6px;scrollbar-width:none}.filters::-webkit-scrollbar{display:none}.chip{flex:0 0 auto;padding:8px 13px;font-size:12px;min-height:40px}
+ .tools{gap:8px}.searchbox{min-width:0;flex:1;margin:0 5px 0 0;padding-inline:4px}.searchbox input{min-width:0;width:100%;font-size:13px;padding:8px 4px}.tools select{font-size:12px;max-width:125px;min-height:40px}
+ .results-info{font-size:12px;margin-bottom:15px}.products{gap:23px 12px}.product-art{height:auto;aspect-ratio: .86;border-radius:21px 21px 14px 14px}.product-art svg{width:84%;height:84%}.product-art .fav{width:40px;height:40px;top:9px;left:9px}.tag{top:10px;right:9px;font-size:10px;padding:4px 9px}.quick-view{left:8px;right:8px;bottom:8px;min-height:38px;font-size:11px}
+ .product-meta{gap:5px;padding:10px 2px 0}.product h3{font-size:13px;line-height:1.6}.product p{font-size:11px;line-height:1.65}.add{width:40px;height:40px}.price-row{margin-top:9px}.price{font-size:13px}.price small{font-size:10px}.swatch{width:18px;height:18px}
+ .bundle{width:92%;margin:18px auto;border-radius:26px}.bundle-art{min-height:260px;padding:12px}.bundle-art>svg{height:250px}.bundle-badge{width:66px;height:66px;font-size:19px;top:15px;left:15px}.bundle-copy{padding:24px 21px 29px}.bundle h2{font-size:clamp(46px,12vw,58px);margin:12px 0}.bundle p{font-size:13px;line-height:1.9}.mood{font-size:12px;padding:8px 13px}.bundle-total{flex-wrap:wrap;gap:12px}
+ .manifesto{gap:28px;padding:48px 0}.manifesto h2{font-size:clamp(48px,12vw,60px);line-height:1.16}.manifesto p{font-size:14px;line-height:2}.scratch{padding:22px 17px;transform:none;border-radius:10px 17px 16px 8px}.scratch h3{font-size:29px;line-height:1.35}.scratch p{font-size:12px;line-height:1.8}.scratch canvas{height:160px}.drawing-tools{gap:5px;flex-wrap:wrap}.drawing-tools .clear{font-size:11px;padding:5px}
+ .gallery-journey{margin-top:12px;border-radius:26px 26px 0 0}.gallery-stage{min-height:0;padding:26px 0 19px}.gallery-heading{align-items:end;gap:6px;margin-bottom:14px}.gallery-heading h2{font-size:39px;line-height:1.2}.gallery-heading p{font-size:10px;line-height:1.7;max-width:116px}.gallery-panel{width:min(84vw,390px);height:470px;grid-template-columns:1fr;grid-template-rows:.8fr 1.2fr;gap:0;padding:18px 19px;border-radius:22px}.gallery-panel h3{font-size:clamp(39px,10vw,51px);line-height:1.1;margin:10px 0}.gallery-panel p{font-size:12px;line-height:1.85}.gallery-panel .panel-product{font-size:10px}.gallery-visual{min-height:0}.gallery-visual>svg{height:100%;max-width:260px}.gallery-foot{padding-top:14px;gap:9px;font-size:9px}.gallery-dots{gap:5px}.gallery-dots button{width:34px;height:34px}.gallery-meter{width:54px}.gallery-foot .gallery-tip{max-width:90px}
+ .footer-top{gap:14px;padding-bottom:20px}.footer-top .logo{flex:1 1 100%}.footer-top p{font-size:12px;line-height:1.8}.footer-links{gap:8px 15px;flex-wrap:wrap;font-size:12px}.footer-bottom{font-size:10px;line-height:1.8}.maker-signature{padding-top:13px}.maker-logo{width:calc(min(156px,42vw) + 2mm)}
+ .motion-toggle{display:flex!important;right:10px;bottom:max(10px,env(safe-area-inset-bottom));font-size:9px;padding:7px 10px;min-height:38px}
+ .scroll-hint,.scroll-chapters{display:none!important}
+ .scroll-on .hero-scroll{height:auto}.scroll-on .hero{position:relative;top:auto;height:auto;min-height:0;grid-template-columns:1fr;grid-template-rows:auto;padding:23px 0 20px}
+ .scroll-on .hero h1{font-size:clamp(50px,11.5vw,64px);line-height:1.08;margin:16px 0 12px}.scroll-on .hero .hero-copy>p,.scroll-on .hero .hero-foot{display:block}.scroll-on .hero .hero-copy>p{font-size:14px}.scroll-on .hero .hero-foot{font-size:11px;margin-top:14px}.scroll-on .hero .cta{font-size:12px;padding:10px 18px}.scroll-on .hero .text-link{font-size:12px}.scroll-on .desk{height:clamp(330px,96vw,440px);width:100%}.scroll-on .hero .hero-index{display:block}.scroll-on .hero .book-cover strong{font-size:clamp(43px,11vw,58px)}
+ .scroll-on .gallery-journey{height:auto}.scroll-on .gallery-stage{position:relative;top:auto;height:auto;min-height:0;display:block;padding:26px 0 19px}.scroll-on .gallery-window{overflow-x:auto;scroll-snap-type:x mandatory}.scroll-on .gallery-panel{height:470px}.scroll-on .gallery-track{will-change:auto}
+ .scroll-on #categories{padding-block:45px}.scroll-on .category{transform:none!important;opacity:1!important;transition:transform .25s}.scroll-on .bundle-art>svg{will-change:auto}
+}
+@media(max-width:390px){
+ .nav-actions #favoriteFilter{display:none}.logo strong{font-size:23px}.logo small{font-size:6px}
+ .hero h1{font-size:50px}.desk{height:330px}.hero .hero-notebook{left:27%;width:45%}.round-stamp{right:0;width:54px;height:54px}.round-stamp b{font-size:17px}
+ .section-heading h2{font-size:35px}.category{min-height:152px;padding:13px 11px}.category svg{height:88px}.category .cat-label{font-size:12px}.products{gap:20px 9px}.product h3{font-size:12px}.product p{font-size:10px}.product-art{aspect-ratio:.79}.quick-view{font-size:10px}.tools select{max-width:110px}.gallery-panel{height:438px}.gallery-visual>svg{max-width:230px}.gallery-foot .gallery-tip{display:none}
+}
+@media(min-width:761px){.mobile-nav{display:none!important}}
+@media(prefers-reduced-motion:reduce){.mobile-nav{transition:none}.scroll-on .hero-scroll,.scroll-on .gallery-journey{height:auto}.scroll-on .hero{position:relative;top:auto;height:auto}.scroll-on .gallery-stage{position:relative;top:auto;height:auto}}
+
 </style><style id="personal-mark-style">.maker-signature{display:flex;justify-content:center;border-top:1px solid #ffffff20;margin-top:14px;padding:16px 0 2px}
 .maker-logo{position:relative;width:calc(min(188px,18vw) + 2mm);aspect-ratio:2072/759;flex:none;background:transparent;isolation:isolate}
 .maker-logo:before{content:'';position:absolute;inset:-13% -7%;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at center,#ffffffe0 0%,#ffffffa8 38%,#ffffff50 60%,transparent 77%);filter:blur(4px)}
@@ -73,10 +152,11 @@ body{background:#f4f8f2;isolation:isolate}body:before{content:'';position:fixed;
 </defs></svg>
 <div class="scroll-progress" aria-hidden="true"></div>
 <div class="topnote">یک جای کوچک برای تمام ایده‌های بزرگت <span>✳</span> نسخهٔ نمایشی فروشگاه؛ قیمت‌ها و کالاها نمونه‌اند</div>
-<header><div class="wrap nav"><a class="logo" href="#" aria-label="کاغذ و خیال، خانه"><span class="logo-mark">خ</span><div><strong>کاغذ و خیال</strong><small>PAPER & DAYDREAM</small></div></a><nav aria-label="منوی اصلی"><a href="#shop">فروشگاه</a><a href="#categories">دسته‌بندی‌ها</a><a href="#bundle">ست‌های خیال</a><a href="#story">قصهٔ ما</a></nav><div class="nav-actions"><button id="favoriteFilter" aria-label="نمایش علاقه‌مندی‌ها" title="علاقه‌مندی‌ها"><svg class="icon" viewBox="0 0 24 24"><path d="M12 20S3 15 3 8a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 7-9 12-9 12Z"/></svg></button><button class="bag" id="cartOpen">سبد خیال <b id="cartCount">۰</b></button></div></div></header>
+<header><div class="wrap nav"><a class="logo" href="#" aria-label="کاغذ و خیال، خانه"><span class="logo-mark">خ</span><div><strong>کاغذ و خیال</strong><small>PAPER & DAYDREAM</small></div></a><nav aria-label="منوی اصلی"><a href="#shop">فروشگاه</a><a href="#categories">دسته‌بندی‌ها</a><a href="#bundle">ست‌های خیال</a><a href="#story">قصهٔ ما</a></nav><div class="nav-actions"><button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="باز کردن فهرست" aria-controls="mobileNav" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16" /><path d="M4 12h16" /><path d="M4 19h16" /></svg></button><button id="favoriteFilter" aria-label="نمایش علاقه‌مندی‌ها" title="علاقه‌مندی‌ها"><svg class="icon" viewBox="0 0 24 24"><path d="M12 20S3 15 3 8a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 7-9 12-9 12Z"/></svg></button><button class="bag" id="cartOpen">سبد خیال <b id="cartCount">۰</b></button></div></div><nav class="mobile-nav" id="mobileNav" aria-label="فهرست موبایل" data-open="false" inert><a href="#shop">فروشگاه</a><a href="#categories">دسته‌بندی‌ها</a><a href="#bundle">ست‌های خیال</a><a href="#story">قصهٔ ما</a></nav></header>
 <main>
-<div class="hero-scroll" id="scrollStory"><section class="hero wrap"><div class="hero-copy"><div class="eyebrow">لوازم‌التحریر برای آدم‌های خیال‌باف</div><h1>چیزهای کوچک،<br><em>خیال‌های</em><br>بزرگ.</h1><p>شاید همه‌چیز از یک دفترِ سفید شروع شود؛<br>یا مدادی که دلش می‌خواهد دنیا را رنگی‌تر کند.</p><div class="hero-links"><a class="cta" href="#shop">خیالت را پیدا کن <span>↙</span></a><a class="text-link" href="#bundle">یک ست، یک شروع تازه</a></div><div class="hero-foot"><i></i>برای نوشتن، خط‌خطی‌کردن، دوباره شروع‌کردن.</div></div><div class="desk" aria-label="تصویر میز تحریر با دفتر آبی، مداد، یادداشت و چسب"><div class="orbit"></div><div class="scene-art sticky"><div class="sticky-note">امروز یک ایدهٔ<br>خوب دارم!<span>✳</span></div></div><button class="scene-art hero-notebook" id="heroBook" aria-label="باز کردن دفتر خیال‌نامه" aria-expanded="false"><span class="book-body"></span><span class="book-page">هر ایدهٔ بزرگی،<br>روزی یک خط‌خطی<br>کوچک بوده است.<br><br>حالا نوبت توست...<br>✳</span><span class="book-cover"><span>DAYDREAM CLUB</span><div class="book-sun">☼</div><strong>دفترِ<br>خیال‌های من</strong><small>NOTHING IS TOO SMALL TO BEGIN.</small></span></button><svg class="scene-art pencils" style="color:#e56836" viewBox="0 0 240 270" aria-hidden="true"><use href="#art-pencils"/></svg><svg class="scene-art tape" viewBox="0 0 240 270" aria-hidden="true"><use href="#art-tape"/></svg><svg class="scene-art clips" style="color:#244cb0" viewBox="0 0 240 270" aria-hidden="true"><use href="#art-clips"/></svg><svg class="scene-art rubber" viewBox="0 0 240 270" aria-hidden="true"><use href="#art-eraser"/></svg><div class="round-stamp">ساخته برای<b>شروع‌های نو</b>و فکرهای رنگی</div><div class="handnote">دفتر را باز کن!<b>↗</b></div><span class="hero-index">01 — YOUR NEXT BIG IDEA</span></div></section>
+<div class="hero-scroll" id="scrollStory"><section class="hero wrap"><div class="hero-copy"><div class="eyebrow"><img class="eyebrow-flower" alt="" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM0Nzg4YTAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiA+IDxwYXRoIGQ9Ik0xMiA1YTMgMyAwIDEgMSAzIDNtLTMtM2EzIDMgMCAxIDAtMyAzbTMtM3YxTTkgOGEzIDMgMCAxIDAgMyAzTTkgOGgxbTUgMGEzIDMgMCAxIDEtMyAzbTMtM2gtMW0tMiAzdi0xIiAvPiA8Y2lyY2xlIGN4PSIxMiIgY3k9IjgiIHI9IjIiIC8+IDxwYXRoIGQ9Ik0xMiAxMHYxMiIgLz4gPHBhdGggZD0iTTEyIDIyYzQuMiAwIDctMS42NjcgNy01LTQuMiAwLTcgMS42NjctNyA1WiIgLz4gPHBhdGggZD0iTTEyIDIyYy00LjIgMC03LTEuNjY3LTctNSA0LjIgMCA3IDEuNjY3IDcgNVoiIC8+IDwvc3ZnPg==">لوازم‌التحریر برای آدم‌های خیال‌باف</div><h1>چیزهای کوچک،<br><em>خیال‌های</em><br>بزرگ.</h1><p>شاید همه‌چیز از یک دفترِ سفید شروع شود؛<br>یا مدادی که دلش می‌خواهد دنیا را رنگی‌تر کند.</p><div class="hero-links"><a class="cta" href="#shop">خیالت را پیدا کن <span>↙</span></a><a class="text-link" href="#bundle">یک ست، یک شروع تازه</a></div><div class="hero-foot"><i></i>برای نوشتن، خط‌خطی‌کردن، دوباره شروع‌کردن.</div></div><div class="desk" aria-label="تصویر میز تحریر با دفتر آبی، مداد، یادداشت و چسب"><div class="orbit"></div><div class="scene-art sticky"><div class="sticky-note">امروز یک ایدهٔ<br>خوب دارم!<span>✳</span></div></div><button class="scene-art hero-notebook" id="heroBook" aria-label="باز کردن دفتر خیال‌نامه" aria-expanded="false"><span class="book-body"></span><span class="book-page">هر ایدهٔ بزرگی،<br>روزی یک خط‌خطی<br>کوچک بوده است.<br><br>حالا نوبت توست...<br>✳</span><span class="book-cover"><span>DAYDREAM CLUB</span><div class="book-sun">☼</div><strong>دفترِ<br>خیال‌های من</strong><small>NOTHING IS TOO SMALL TO BEGIN.</small></span></button><svg class="scene-art pencils" style="color:#e56836" viewBox="0 0 240 270" aria-hidden="true"><use href="#art-pencils"/></svg><svg class="scene-art tape" viewBox="0 0 240 270" aria-hidden="true"><use href="#art-tape"/></svg><svg class="scene-art clips" style="color:#244cb0" viewBox="0 0 240 270" aria-hidden="true"><use href="#art-clips"/></svg><svg class="scene-art rubber" viewBox="0 0 240 270" aria-hidden="true"><use href="#art-eraser"/></svg><div class="round-stamp">ساخته برای<b>شروع‌های نو</b>و فکرهای رنگی</div><div class="handnote">دفتر را باز کن!<b>↗</b></div><span class="hero-index">01 — YOUR NEXT BIG IDEA</span></div></section>
 </div><div class="ticker" aria-hidden="true"><div class="ticker-inner"><span>کمی بنویس</span><i>✳</i><span>کمی خیال بباف</span><i>✳</i><span>یک چیز تازه بساز</span><i>✳</i><span>از نو شروع کن</span><i>✳</i><span>کمی بنویس</span></div></div>
+<div class="organic-divider" aria-hidden="true"><img alt="" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDQwIDk2IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0wIDQ2YzE3MCAyOCAyNTYtMjYgNDE5LThzMjYyIDMxIDQzMCAzIDI3MS0xOSA1OTEgN3Y0OEgweiIvPjwvc3ZnPg=="></div>
 <section class="section wrap" id="categories"><div class="section-heading reveal"><div><div class="eyebrow">هر خیال، یک ابزار می‌خواهد</div><h2>از کجا شروع کنیم؟</h2></div><p>یک میز پر از امکان.<br>انتخاب با توست.</p></div><div class="categories" id="categoryList"></div></section>
 <section class="gallery-journey" id="colorJourney" aria-label="سفر در رنگ‌های فروشگاه">
  <div class="gallery-stage">
@@ -288,6 +368,51 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
 
 
 -->
+<!-- Lucide menu, x and flower-2 SVG icon attribution; ISC License, with all ISC/MIT notices retained below. -->
+<!-- ISC License
+
+Copyright (c) 2026 Lucide Icons and Contributors
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+---
+
+The following Lucide icons are derived from the Feather project:
+
+airplay, alert-circle, alert-octagon, alert-triangle, aperture, arrow-down-circle, arrow-down-left, arrow-down-right, arrow-down, arrow-left-circle, arrow-left, arrow-right-circle, arrow-right, arrow-up-circle, arrow-up-left, arrow-up-right, arrow-up, at-sign, calendar, cast, check, chevron-down, chevron-left, chevron-right, chevron-up, chevrons-down, chevrons-left, chevrons-right, chevrons-up, circle, clipboard, clock, code, columns, command, compass, corner-down-left, corner-down-right, corner-left-down, corner-left-up, corner-right-down, corner-right-up, corner-up-left, corner-up-right, crosshair, database, divide-circle, divide-square, dollar-sign, download, external-link, feather, frown, hash, headphones, help-circle, info, italic, key, layout, life-buoy, link-2, link, loader, lock, log-in, log-out, maximize, meh, minimize, minimize-2, minus-circle, minus-square, minus, monitor, moon, more-horizontal, more-vertical, move, music, navigation-2, navigation, octagon, pause-circle, percent, plus-circle, plus-square, plus, power, radio, rss, search, server, share, shopping-bag, sidebar, smartphone, smile, square, table-2, tablet, target, terminal, trash-2, trash, triangle, tv, type, upload, x-circle, x-octagon, x-square, x, zoom-in, zoom-out
+
+The MIT License (MIT) (for the icons listed above)
+
+Copyright (c) 2013-present Cole Bemis
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+ -->
 <script>
 'use strict';
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)], fa=n=>Number(n).toLocaleString('fa-IR');
@@ -351,7 +476,7 @@ $('#addBundle').onclick=()=>{const ids=[1,2,5,6];if(ids.some(id=>{const c=id===5
 $('#heroBook').onclick=()=>{const open=$('#heroBook').classList.toggle('open');$('#heroBook').setAttribute('aria-expanded',open);$('#heroBook').setAttribute('aria-label',open?'بستن دفتر خیال‌نامه':'باز کردن دفتر خیال‌نامه')};
 function info(title,body){$('#infoTitle').textContent=title;$('#infoContent').innerHTML=body;$('#infoDialog').showModal()}
 $('#helpOpen').onclick=()=>info('راهنمای گشت‌وگذار','<p>با دسته‌بندی‌ها و جست‌وجو کالایت را پیدا کن. دایره‌های رنگی، رنگ بدنه را تغییر می‌دهند. با «از نزدیک ببین» مشخصات را ببین و با ＋ به سبد اضافه کن.</p><p>قلب، کالا را در علاقه‌مندی‌ها نگه می‌دارد. سبد و علاقه‌مندی‌ها در همین مرورگر ذخیره می‌شوند، در صورتی که ذخیره‌سازی محلی مجاز باشد.</p><p class="demo-note">این فایل یک نمونهٔ فروشگاه آفلاین است؛ قیمت‌ها، مشخصات و نام کالاها نمونه‌اند. حساب کاربری، موجودی زنده و درگاه پرداخت ندارد. خروجی سبد فقط فهرست متنی انتخاب‌هاست.</p>');
-$('#sourcesOpen').onclick=()=>info('پشتِ این میز خیال','<p>این طراحی با بررسی کتابخانهٔ منابع شخصی، پوشهٔ بیزی و پروژهٔ آفرینه شکل گرفته است.</p><p>از آفرینه: فونت نمایشی Mirza با مجوز OFL و ایدهٔ دفتر با جلد بازشونده؛ مکانیک دفتر برای این صفحه از نو با CSS نوشته شده است.</p><p>از بیزی: فونت فارسیِ پروژهٔ فارابیک با مجوز OFL، و مطالعهٔ ترکیب‌های OnScrollLayoutFormations و OneElementScroll برای ریتم ورود و چیدمان اشیا. هیچ کتابخانهٔ حرکتی برای اجرا لازم نیست.</p><p>تصویر تمام لوازم‌التحریر با SVG و CSS مخصوص همین صفحه ساخته شده؛ مدل‌های سه‌بعدی و تکسچرهای بدون مجوز روشن وارد فایل نشده‌اند. متن کامل مجوز فونت‌ها داخل سورس همین HTML نگهداری شده است.</p>');
+$('#sourcesOpen').onclick=()=>info('پشتِ این میز خیال','<p>ریشهٔ این فروشگاه در بررسی منابع بیزی، آفرینه و کتابخانهٔ طراحی پروژه است.</p><p><b>حروف:</b> وزیرمتنِ فارسیِ محلی برای متن‌های خوانا و Mirza از آفرینه برای تیترها و نوشتهٔ روی دفتر؛ اندازه و فاصله‌گذاری برای خواندن راست‌به‌چپ تنظیم شده است.</p><p><b>نشانه‌ها و برش:</b> آیکون‌های Flower-2 و Menu از Lucide داخل بیزی و جداکنندهٔ موج‌دارِ organic-divider از کتابخانهٔ SVG بیزی. متن مجوز آیکون‌ها و فونت‌ها همراه فایل منبع آمده است.</p><p><b>حرکت:</b> دفترِ ورق‌خورِ Animorio و نمونه‌های OnScrollLayoutFormations و OneElementScroll در بیزی برای ایدهٔ روایت استفاده شدند؛ تایم‌لاین سبک و بومی نوشته شده تا اسکرول گوشی طبیعی بماند و کتابخانهٔ حرکتی سنگینی بار نشود.</p><p>طرح آبرنگ، ترکیب‌بندی دفتر و تصویر محصولات با SVG/CSS اختصاصی همین فروشگاه ساخته شده‌اند؛ آبرنگ اصلیِ پروژه در موبایل از کناره‌ها قاب‌بندی می‌شود تا هم دیده شود هم پشت متن‌ها شلوغ نشود.</p>');
 $$('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close()}}));
 const canvas=$('#doodle'),ctx=canvas.getContext('2d');let ink='#244cb0',drawing=false,strokes=[],activeStroke=null;
 function redraw(){const r=canvas.getBoundingClientRect(),dpr=window.devicePixelRatio||1;canvas.width=Math.round(r.width*dpr);canvas.height=Math.round(r.height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);ctx.lineCap='round';ctx.lineJoin='round';ctx.lineWidth=2.4;strokes.forEach(s=>{ctx.strokeStyle=s.ink;ctx.beginPath();s.points.forEach(([x,y],k)=>k?ctx.lineTo(x*r.width,y*r.height):ctx.moveTo(x*r.width,y*r.height));ctx.stroke()})}
@@ -467,5 +592,24 @@ const ScrollMath = Object.freeze({
   lift.style.left=`${x/w*100}%`;lift.style.width=`${cw/w*100}%`;
   base.src=baseUrl;lift.replaceChildren(piece);box.classList.add('maker-ready');
  }catch(error){box.classList.add('maker-error');console.warn('Maker signature:',error);}
+})();
+</script><script>(()=>{
+ const trigger=document.querySelector('#mobileMenuToggle');
+ const menu=document.querySelector('#mobileNav');
+ if(!trigger||!menu)return;
+ const setOpen=open=>{
+  menu.dataset.open=String(open);
+  menu.inert=!open;
+  trigger.setAttribute('aria-expanded',String(open));
+  trigger.setAttribute('aria-label',open?'بستن فهرست':'باز کردن فهرست');
+  trigger.innerHTML=open
+   ?'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>'
+   :'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16" /><path d="M4 12h16" /><path d="M4 19h16" /></svg>';
+ };
+ trigger.addEventListener('click',()=>setOpen(menu.dataset.open!=='true'));
+ menu.addEventListener('click',event=>{if(event.target.closest('a'))setOpen(false)});
+ document.addEventListener('click',event=>{if(menu.dataset.open==='true'&&!menu.contains(event.target)&&!trigger.contains(event.target))setOpen(false)});
+ document.addEventListener('keydown',event=>{if(event.key==='Escape'&&menu.dataset.open==='true'){setOpen(false);trigger.focus()}});
+ window.addEventListener('resize',()=>{if(innerWidth>760)setOpen(false)},{passive:true});
 })();
 </script></body></html>
